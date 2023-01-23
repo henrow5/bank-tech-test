@@ -5,7 +5,10 @@ class Account {
   }
 
   deposit(amount) {
-    if (amount < 1) throw new Error('Invalid deposit amount');
+    if (amount < 1)
+      throw new Error(
+        'Invalid deposit amount. Deposit amount must a minimum of 1'
+      );
 
     this.balance += amount;
     this.#createTransaction('credit', amount);

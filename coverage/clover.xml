@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1674500234916" clover="3.2.0">
-  <project timestamp="1674500234916" name="All files">
-    <metrics statements="22" coveredstatements="22" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7" elements="35" coveredelements="35" complexity="0" loc="22" ncloc="22" packages="1" files="2" classes="2"/>
+<coverage generated="1674511789311" clover="3.2.0">
+  <project timestamp="1674511789311" name="All files">
+    <metrics statements="23" coveredstatements="23" conditionals="6" coveredconditionals="6" methods="7" coveredmethods="7" elements="36" coveredelements="36" complexity="0" loc="23" ncloc="23" packages="1" files="2" classes="2"/>
     <file name="account.js" path="/Users/henrow/Desktop/challenges/bank-tech-test/account.js">
-      <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
-      <line num="3" count="4" type="stmt"/>
-      <line num="4" count="4" type="stmt"/>
-      <line num="8" count="4" type="cond" truecount="2" falsecount="0"/>
-      <line num="9" count="3" type="stmt"/>
-      <line num="10" count="3" type="stmt"/>
-      <line num="14" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="15" count="1" type="stmt"/>
-      <line num="16" count="1" type="stmt"/>
-      <line num="17" count="1" type="stmt"/>
+      <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <line num="3" count="8" type="stmt"/>
+      <line num="4" count="8" type="stmt"/>
+      <line num="8" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="13" count="7" type="stmt"/>
+      <line num="14" count="7" type="stmt"/>
+      <line num="18" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="1" type="stmt"/>
       <line num="21" count="4" type="stmt"/>
-      <line num="30" count="1" type="stmt"/>
+      <line num="22" count="4" type="stmt"/>
+      <line num="26" count="11" type="stmt"/>
+      <line num="35" count="2" type="stmt"/>
     </file>
     <file name="statement.js" path="/Users/henrow/Desktop/challenges/bank-tech-test/statement.js">
       <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
-      <line num="3" count="4" type="stmt"/>
-      <line num="4" count="4" type="stmt"/>
-      <line num="8" count="4" type="stmt"/>
-      <line num="10" count="4" type="stmt"/>
-      <line num="12" count="4" type="stmt"/>
-      <line num="16" count="4" type="stmt"/>
-      <line num="18" count="4" type="stmt"/>
-      <line num="19" count="6" type="cond" truecount="2" falsecount="0"/>
-      <line num="20" count="4" type="stmt"/>
-      <line num="26" count="2" type="stmt"/>
-      <line num="36" count="1" type="stmt"/>
+      <line num="3" count="8" type="stmt"/>
+      <line num="4" count="8" type="stmt"/>
+      <line num="8" count="8" type="stmt"/>
+      <line num="10" count="8" type="stmt"/>
+      <line num="12" count="8" type="stmt"/>
+      <line num="16" count="8" type="stmt"/>
+      <line num="18" count="8" type="stmt"/>
+      <line num="19" count="13" type="cond" truecount="2" falsecount="0"/>
+      <line num="20" count="8" type="stmt"/>
+      <line num="26" count="5" type="stmt"/>
+      <line num="36" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>
