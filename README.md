@@ -24,14 +24,14 @@ date || credit || debit || balance
 10/01/2023 || 1000.00 || || 1000.00
 ```
 
-## Introduction
+# Introduction
 
 This is a small banking program I wrote to meet the specification above.
 
 Program running in node REPL
 ![screenshot](./program-demo.png)
 
-## Setup
+# Setup
 
 1. Node is required in order to run this program
 2. Clone or download this repository
@@ -42,7 +42,7 @@ cd bank-tech-test
 npm install
 ```
 
-## Usage
+# Usage
 
 To run a sample demonstration of the program, run the demo.js file in the project root folder. You should see a bank statement output printed to the console.
 
@@ -70,7 +70,7 @@ account.withdraw(500);
 statement.print();
 ```
 
-## Tests
+# Tests
 
 To run the tests, in the project directory run:
 
@@ -84,15 +84,15 @@ To see the test coverage, run:
 jest --coverage
 ```
 
-## Additional Information
+# Approach
 
-I decided to use two classes as I felt that three or more seemed unnecesssary.
+I decided to use two classes as I felt that three seemed unnecesssary.
 
 The BankAccount class is responsible for holding state i.e. storing all transactions and the balance, as well as manipulating its own data.
 
-The BankStatement class acts like a display. It consumes the BankAccount class and gets the data from it to be printed into a statement for a user to view.
+The BankStatement class acts like a viewer of data. It consumes the BankAccount class and gets the data from it to be formatted into a statement for a user to view.
 
 ![screenshot](./btt-classes-diagram.png)
 
 I used a Test-driven developement approach for the creation of this program, starting with a test and then implementing a feature.
-I have unit tests to test each class in isolation as well as integration tests for the interaction of both classes together.
+I have unit tests to test each class in isolation as well as integration tests for the interaction of both classes together. Test coverage is 100%
