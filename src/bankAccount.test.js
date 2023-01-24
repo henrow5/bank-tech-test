@@ -3,7 +3,8 @@ const BankAccount = require('./bankAccount');
 describe('Account', () => {
   beforeEach(() => {
     account = new BankAccount();
-    todaysDate = new Date().toLocaleDateString('en-GB');
+    jest.useFakeTimers('modern');
+    jest.setSystemTime(new Date('2020-01-23'));
   });
 
   it('can make deposits', () => {
@@ -11,7 +12,7 @@ describe('Account', () => {
     account.deposit(0.79);
 
     expect(account.balance).toBe(5001);
-    expect(account.transactions[0].date).toBe(todaysDate);
+    expect(account.transactions[0].date).toBe('23/01/2020');
     expect(account.transactions[0].type).toBe('credit');
     expect(account.transactions[0].amount).toBe(0.79);
     expect(account.transactions[0].balance).toBe(5001);
@@ -22,7 +23,7 @@ describe('Account', () => {
     account.withdraw(500.49);
 
     expect(account.balance).toBe(4499.51);
-    expect(account.transactions[0].date).toBe(todaysDate);
+    expect(account.transactions[0].date).toBe('23/01/2020');
     expect(account.transactions[0].type).toBe('debit');
     expect(account.transactions[0].amount).toBe(500.49);
     expect(account.transactions[0].balance).toBe(4499.51);

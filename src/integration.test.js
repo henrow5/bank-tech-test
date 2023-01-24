@@ -5,7 +5,8 @@ describe('Integration', () => {
   beforeEach(() => {
     account = new BankAccount();
     statement = new BankStatement(account);
-    todaysDate = new Date().toLocaleDateString('en-GB');
+    jest.useFakeTimers('modern');
+    jest.setSystemTime(new Date('2021-01-20'));
   });
 
   it('returns only the statement header with no transactions', () => {
@@ -16,7 +17,7 @@ describe('Integration', () => {
     account.deposit(5000);
 
     expect(statement.print()).toBe(
-      `date || credit || debit || balance\n${todaysDate} || 5000.00 || || 5000.00`
+      `date || credit || debit || balance\n20/01/2021 || 5000.00 || || 5000.00`
     );
   });
 
@@ -25,7 +26,7 @@ describe('Integration', () => {
     account.withdraw(500);
 
     expect(statement.print()).toBe(
-      `date || credit || debit || balance\n${todaysDate} || || 500.00 || 4500.00\n${todaysDate} || 5000.00 || || 5000.00`
+      `date || credit || debit || balance\n20/01/2021 || || 500.00 || 4500.00\n20/01/2021 || 5000.00 || || 5000.00`
     );
   });
 
@@ -36,7 +37,7 @@ describe('Integration', () => {
     account.withdraw(600);
 
     expect(statement.print()).toBe(
-      `date || credit || debit || balance\n${todaysDate} || || 600.00 || 4000.00\n${todaysDate} || 100.00 || || 4600.00\n${todaysDate} || || 500.00 || 4500.00\n${todaysDate} || 5000.00 || || 5000.00`
+      `date || credit || debit || balance\n20/01/2021 || || 600.00 || 4000.00\n20/01/2021 || 100.00 || || 4600.00\n20/01/2021 || || 500.00 || 4500.00\n20/01/2021 || 5000.00 || || 5000.00`
     );
   });
 });
