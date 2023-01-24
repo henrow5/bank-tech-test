@@ -23,7 +23,7 @@ class BankStatement {
           )} || || ${transaction.balance.toFixed(2)}`
         );
       } else {
-        // transaction.type === 'credit'
+        // transaction.type === 'debit'
         this.statementLines.push(
           `${transaction.date} || || ${transaction.amount.toFixed(
             2
