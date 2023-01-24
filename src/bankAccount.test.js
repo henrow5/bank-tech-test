@@ -1,6 +1,6 @@
 const BankAccount = require('./bankAccount');
 
-describe('Account', () => {
+describe('BankAccount', () => {
   beforeEach(() => {
     account = new BankAccount();
     jest.useFakeTimers('modern');
