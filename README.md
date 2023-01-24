@@ -26,7 +26,7 @@ date || credit || debit || balance
 
 ## Introduction
 
-This is a small banking program I wrote. I believe it meets the brief above.
+This is a small banking program I wrote to meet the specification above.
 
 Program running in node REPL
 ![screenshot](./program-demo.png)
@@ -84,11 +84,11 @@ To see the test coverage, run:
 jest --coverage
 ```
 
-## Development Information
+## Additional Information
 
 I decided to use two classes as I felt that three or more seemed unnecesssary.
 
-The BankAccount class is responsible holding state i.e. storing all transactions and the balance, as well as manipulating its own data.
+The BankAccount class is responsible for holding state i.e. storing all transactions and the balance, as well as manipulating its own data.
 
 The BankStatement class acts like a display. It consumes the BankAccount class and gets the data from it to be printed into a statement for a user to view.
 
