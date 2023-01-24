@@ -28,7 +28,7 @@ date || credit || debit || balance
 
 This is a small banking program I wrote to meet the specification above.
 
-Program running in node REPL
+Screenshot of program running in Node REPL
 
 ![screenshot](./program-demo1.png)
 
