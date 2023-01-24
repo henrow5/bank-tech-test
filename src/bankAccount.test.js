@@ -19,13 +19,13 @@ describe('Account', () => {
 
   it('can make a withdrawal', () => {
     account.deposit(5000);
-    account.withdraw(500);
+    account.withdraw(500.49);
 
-    expect(account.balance).toBe(4500);
+    expect(account.balance).toBe(4499.51);
     expect(account.transactions[0].date).toBe(todaysDate);
     expect(account.transactions[0].type).toBe('debit');
-    expect(account.transactions[0].amount).toBe(500);
-    expect(account.transactions[0].balance).toBe(4500);
+    expect(account.transactions[0].amount).toBe(500.49);
+    expect(account.transactions[0].balance).toBe(4499.51);
   });
 
   it('throws an error with an invalid deposit amount', () => {
