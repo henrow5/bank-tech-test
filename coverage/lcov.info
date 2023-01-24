@@ -1,5 +1,5 @@
 TN:
-SF:src/bankAccount.js
+SF:bankAccount.js
 FN:2,(anonymous_0)
 FN:7,(anonymous_1)
 FN:16,(anonymous_2)
@@ -34,7 +34,7 @@ BRF:6
 BRH:6
 end_of_record
 TN:
-SF:src/bankStatement.js
+SF:bankStatement.js
 FN:2,(anonymous_0)
 FN:7,(anonymous_1)
 FN:18,(anonymous_2)

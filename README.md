@@ -1,3 +1,5 @@
+# Bank Tech Test
+
 ## Specification
 
 ### Requirements
@@ -22,4 +24,75 @@ date || credit || debit || balance
 10/01/2023 || 1000.00 || || 1000.00
 ```
 
-## Installation
+## Introduction
+
+This is a small banking program I wrote. I believe it meets the brief above.
+
+Program running in node REPL
+![screenshot](./program-demo.png)
+
+## Setup
+
+1. Node is required in order to run this program
+2. Clone or download this repository
+3. In the project root folder, install Node.js dependencies
+
+```bash
+cd bank-tech-test
+npm install
+```
+
+## Usage
+
+To run a sample demonstration of the program, run the demo.js file in the project root folder. You should see a bank statement output printed to the console.
+
+```bash
+cd bank-tech-test
+node demo.js
+```
+
+To use the node REPL to interact with the program, first run `node` in the project root folder then run the following to import the BankAccount and BankStatement classes and create instances of them:
+
+```javascript
+const BankAccount = require('./src/bankAccount');
+const BankStatement = require('./src/bankStatement');
+
+const account = new BankAccount();
+const statement = new BankStatement(account);
+```
+
+Now you can interact with the program like in this following example:
+
+```javascript
+account.deposit(1000);
+account.deposit(2000);
+account.withdraw(500);
+statement.print();
+```
+
+## Tests
+
+To run the tests, in the project directory run:
+
+```bash
+jest
+```
+
+To see the test coverage, run:
+
+```bash
+jest --coverage
+```
+
+## Development Information
+
+I decided to use two classes as I felt that three or more seemed unnecesssary.
+
+The BankAccount class is responsible holding state i.e. storing all transactions and the balance, as well as manipulating its own data.
+
+The BankStatement class acts like a display. It consumes the BankAccount class and gets the data from it to be printed into a statement for a user to view.
+
+![screenshot](./btt-classes-diagram.png)
+
+I used a Test-driven developement approach for the creation of this program, starting with a test and then implementing a feature.
+I have unit tests to test each class in isolation as well as integration tests for the interaction of both classes together.
