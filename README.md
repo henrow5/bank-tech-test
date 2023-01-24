@@ -35,7 +35,7 @@ Program running in node REPL
 
 1. Node is required in order to run this program
 2. Clone or download this repository
-3. In the project root folder, install Node.js dependencies
+3. In the project root folder, install the Node.js dependencies
 
 ```bash
 cd bank-tech-test
