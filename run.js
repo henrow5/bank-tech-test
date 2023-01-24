@@ -1,8 +1,8 @@
-const Account = require('./account');
-const Statement = require('./statement');
+const BankAccount = require('./bankAccount');
+const BankStatement = require('./bankStatement');
 
-const account = new Account();
-const statement = new Statement(account);
+const account = new BankAccount();
+const statement = new BankStatement(account);
 
 account.deposit(1000);
 account.deposit(2000);

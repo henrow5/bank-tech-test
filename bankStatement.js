@@ -1,18 +1,18 @@
-class Statement {
+class BankStatement {
   constructor(account) {
     this.account = account;
     this.statementLines = [];
   }
 
   print() {
-    this.createLines(this.account.transactions);
+    this.#createLines();
 
     const statement = this.statementLines.join('\n');
 
     return statement;
   }
 
-  createLines(transactions) {
+  #createLines() {
     this.statementLines = ['date || credit || debit || balance'];
 
     this.account.transactions.forEach((transaction) => {
@@ -23,6 +23,7 @@ class Statement {
           )} || || ${transaction.balance.toFixed(2)}`
         );
       } else {
+        // transaction.type === 'credit'
         this.statementLines.push(
           `${transaction.date} || || ${transaction.amount.toFixed(
             2
@@ -33,4 +34,4 @@ class Statement {
   }
 }
 
-module.exports = Statement;
+module.exports = BankStatement;

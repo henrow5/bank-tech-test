@@ -1,12 +1,12 @@
-const Statement = require('./statement');
+const BankStatement = require('./bankStatement');
 
-describe('Statement', () => {
+describe('BankStatement', () => {
   it('returns only the statement header with no transactions', () => {
     const mockAccount = {
       transactions: [],
     };
 
-    const statement = new Statement(mockAccount);
+    const statement = new BankStatement(mockAccount);
     expect(statement.print()).toBe('date || credit || debit || balance');
   });
 
@@ -22,7 +22,7 @@ describe('Statement', () => {
       ],
     };
 
-    const statement = new Statement(mockAccount);
+    const statement = new BankStatement(mockAccount);
 
     expect(statement.print()).toBe(
       'date || credit || debit || balance\n23/01/2023 || 5000.00 || || 5000.00'
@@ -47,7 +47,7 @@ describe('Statement', () => {
       ],
     };
 
-    const statement = new Statement(mockAccount);
+    const statement = new BankStatement(mockAccount);
 
     expect(statement.print()).toBe(
       'date || credit || debit || balance\n23/01/2023 || || 500.00 || 4500.00\n23/01/2023 || 5000.00 || || 5000.00'
@@ -78,7 +78,7 @@ describe('Statement', () => {
       ],
     };
 
-    const statement = new Statement(mockAccount);
+    const statement = new BankStatement(mockAccount);
 
     expect(statement.print()).toBe(
       'date || credit || debit || balance\n23/01/2023 || 100.00 || || 4600.00\n22/01/2023 || || 500.00 || 4500.00\n21/01/2023 || 5000.00 || || 5000.00'

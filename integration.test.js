@@ -1,10 +1,10 @@
-const Account = require('./account');
-const Statement = require('./statement');
+const BankAccount = require('./bankAccount');
+const BankStatement = require('./bankStatement');
 
 describe('Integration', () => {
   beforeEach(() => {
-    account = new Account();
-    statement = new Statement(account);
+    account = new BankAccount();
+    statement = new BankStatement(account);
     todaysDate = new Date().toLocaleDateString('en-GB');
   });
 
