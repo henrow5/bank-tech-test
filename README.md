@@ -87,7 +87,7 @@ jest --coverage
 
 # Approach
 
-I decided to use two classes as I felt that three seemed unnecesssary.
+I decided to use two classes as I felt that three seemed unnecessary.
 
 The BankAccount class is responsible for holding state i.e. storing all transactions and the balance, as well as manipulating its own data.
 
