@@ -95,5 +95,5 @@ The BankStatement class acts like a viewer of data. It consumes the BankAccount 
 
 ![screenshot](./btt-classes-diagram.png)
 
-I used a Test-driven developement approach for the creation of this program, starting with a test and then implementing a feature.
+I used a Test-driven developement approach for the creation of this program, starting with a test and then implementing a feature, gradually building up the program with each subsequent test.
 I have unit tests to test each class in isolation as well as integration tests for the interaction of both classes together. Test coverage is 100%.
