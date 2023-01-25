@@ -1,4 +1,4 @@
-# Bank Tech Test
+# Bank Tech Test (Code Quality Week)
 
 ## Specification
 
@@ -26,16 +26,16 @@ date || credit || debit || balance
 
 # Introduction
 
-This is a small banking program I wrote to meet the specification above.
+This is a small banking program I wrote to meet the specification outlined above.
 
-Screenshot of program running in Node REPL
+Screenshot of the program running in the Node REPL
 
 ![screenshot](./program-demo1.png)
 
 # Setup
 
 1. Node is required in order to run this program
-2. Clone or download this repository
+2. Clone or download a zip of this repository
 3. In the project root folder, install the Node.js dependencies
 
 ```bash
@@ -52,12 +52,16 @@ cd bank-tech-test
 node demo.js
 ```
 
-To use the node REPL to interact with the program, first run `node` in the project root folder then run the following to import the BankAccount and BankStatement classes and create instances of them:
+To use the node REPL to interact with the program, first run `node` in the project root folder then import the BankAccount and BankStatement classes by running the following:
 
 ```javascript
 const BankAccount = require('./src/bankAccount');
 const BankStatement = require('./src/bankStatement');
+```
 
+Next create instances of the classes:
+
+```javascript
 const account = new BankAccount();
 const statement = new BankStatement(account);
 ```
@@ -87,7 +91,7 @@ jest --coverage
 
 # Approach
 
-I decided to use two classes as I felt that three seemed unnecessary.
+I decided to go with two classes. It seemed unnecessary to me to have a third class as it would possibly have only one method.
 
 The BankAccount class is responsible for holding state i.e. storing all transactions and the balance, as well as manipulating its own data.
 
@@ -95,7 +99,7 @@ The BankStatement class acts like a viewer of data. It consumes the BankAccount 
 
 ![screenshot](./btt-classes-diagram.png)
 
-I used a Test-driven developement approach for the creation of this program, starting with a test and then implementing a feature, gradually building up the program with each subsequent test.
+I used a Test-driven development approach for the creation of this program, starting with a test and then implementing a feature, gradually building up the program with each subsequent test.
 I have unit tests to test each class in isolation as well as integration tests for the interaction of both classes together.
 Test coverage is 100%.
 
