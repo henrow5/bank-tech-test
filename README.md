@@ -30,7 +30,7 @@ This is a small banking program I wrote to meet the specification outlined above
 
 Screenshot of the program running in the Node REPL
 
-![screenshot](./program-demo1.png)
+![screenshot](images/program-demo1.png)
 
 # Setup
 
@@ -97,10 +97,10 @@ The BankAccount class is responsible for holding state i.e. storing all transact
 
 The BankStatement class acts like a viewer of data. It consumes the BankAccount class and gets the data from it to be formatted into a statement for a user to view.
 
-![screenshot](./btt-classes-diagram.png)
+![screenshot](images/btt-classes-diagram.png)
 
 I used a Test-driven development approach for the creation of this program, starting with a test and then implementing a feature, gradually building up the program with each subsequent test.
 I have unit tests to test each class in isolation as well as integration tests for the interaction of both classes together.
 Test coverage is 100%.
 
-![screenshot](./test-coverage.png)
+![screenshot](images/test-coverage.png)
